@@ -1,0 +1,65 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="description" content="Flat by the Cemetery, Art and Illustration by David C. O'Gara">
+    <meta name="keywords"
+        content="Flat by the Cemetery, art, comic art, illustration, David C. O'Gara, portfolio, gallery">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, maximum-scale=10">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <title>Flat by the Cemetery</title>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1><a href="{% url 'index' %}">Flat by the Cemetery</a></h1>
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'blog' %}">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock content%}
+    </main>
+
+
+    <footer>
+        <ul>
+            <li>
+                <p>All images Copyright (C) David C. O'Gara.</p>
+            </li>
+            <li>
+                <a href="https://instagram.com/flatbythecemetery" target="_blank" rel="noopener"
+                aria-label="Vist my Instagram page (opens in a new tab)"><i class="fa-brands fa-instagram" title="fontawesome Instagram logo"></i></a>
+            </li>
+            <li>
+                <a href="https://youtube.com/channel/UC8wHcC0aB9f6SX9jpmDqKBA" target="_blank" rel="noopener"
+                aria-label="Vist my Youtube page (opens in a new tab)">
+                <i class="fa-brands fa-youtube" title="fontawesome Youtube logo"></i>
+            </a>
+            </li>
+        </ul>
+        
+    </footer>
+
+    <!-- script line below to allow for fontawesome icons -->
+    <script src="https://kit.fontawesome.com/5216db6454.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
