@@ -31,7 +31,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = os.getenv("DEBUG") == "True"
 
 ALLOWED_HOSTS = [
-    'flatbythecemetery-e5a5e08b1d08.herokuapp.com/',
+    'flatbythecemetery-e5a5e08b1d08.herokuapp.com',
     ]
 
 
