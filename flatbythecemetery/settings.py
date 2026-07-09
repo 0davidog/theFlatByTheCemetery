@@ -30,7 +30,9 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DEBUG") == "True"
 
-ALLOWED_HOSTS = ['https://flatbythecemetery-e5a5e08b1d08.herokuapp.com/',]
+ALLOWED_HOSTS = [
+    'flatbythecemetery-e5a5e08b1d08.herokuapp.com/',
+    ]
 
 
 # Application definition
