@@ -1,1 +1,1 @@
-web: gunicorn triviasurvivor.wsgi --log-file -
+web: gunicorn flatbythecemetery.wsgi --log-file -
