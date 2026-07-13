@@ -11,3 +11,42 @@ html {
 li {
     display: inline-block;
 }
+a {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+.container {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+.content {
+    width: 100vw;
+}
+/** HEADER **/
+nav {
+    grid-template-columns: 1fr 1fr;
+
+}
+/** HERO **/
+#hero {
+    width: 1366px;
+    max-width: 100vw;
+    height: 768px;
+    background-image: url('/static/images/graveyard-hero.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-content: start;
+}
+#hero-text{
+    margin-top: 100px;
+}
+/** FOOTER **/
+footer {
+    width: 100%;
+    text-align: center;
+}
