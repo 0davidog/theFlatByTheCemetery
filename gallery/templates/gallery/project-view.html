@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{ project.title }}</h1>
+
+<main class="container thumb-grid">
+    {% for image in images %}
+<div class="thumb-card">
+    {% load cloudinary %}
+    <a href="{% url 'image' project.slug image.id %}">{% cloudinary image.image quality='auto' width=200 height=200 crop='thumb' %}</a>
+</div>
+{% endfor %}
+
+
+</main>
+<p>{{ project.description }}</p>
+<a href="{% url 'gallery' %}"><small>[Return to Main Gallery]</small></a>
+
+
+
+
+
+
+
+{% endblock %}

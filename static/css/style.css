@@ -23,6 +23,9 @@ a {
     justify-content: center;
     align-content: center;
 }
+.content{
+    min-height: 768px;
+}
 /** HEADER **/
 nav {
     grid-template-columns: 1fr 1fr;
@@ -46,4 +49,24 @@ nav {
 footer {
     width: 100%;
     text-align: center;
+}
+/** GALLERY **/
+.project-card{
+    border: 1px solid #505050;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+.thumb-grid{
+    grid-template-columns: repeat(4, 1fr);
+}
+.thumb-card{
+    border-radius: 15px;
+    margin: 10px;
+    overflow: hidden;
+}
+.return-links{
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 10px;
 }

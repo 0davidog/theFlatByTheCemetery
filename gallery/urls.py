@@ -20,4 +20,6 @@ from . import views
 
 urlpatterns = [
     path('', views.gallery, name="gallery"),
+    path('<slug:slug>/', views.project, name='project'),
+    path('<slug:slug>/<int:id>/', views.image, name='image'),
 ]

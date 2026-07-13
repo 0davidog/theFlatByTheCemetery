@@ -1,13 +1,21 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Hi. Gallery Here.</h1>
-{% for image in images %}
-{{ image.title }}
-{{ image.description }}
-<img src="{{ image.image.url }}" alt="">
+<h1>Projects</h1>
+<main>
+    {% for project in projects %}
+    <div class="project-card container">
+        <h2><a href="{% url 'project' project.slug %}">{{ project.title }}&nbsp;[{{ project.year }}]</a></h2>
+        <p>{{ project.description }}</p>
+        <a href="#"><small>[View Gallery]</small></a>
+    </div>
+    {% endfor %}
+</main>
 
-{% endfor %}
+
+
+
+
 
 
 {% endblock %}

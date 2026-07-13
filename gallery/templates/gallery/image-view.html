@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{ image.title }}</h1>
+
+
+    {% load cloudinary %}
+    {% cloudinary image.image quality='auto' height=500  %}
+
+
+
+
+<p>{{ image.description }}</p>
+
+<div class="container return-links">
+    <a href="{% url 'gallery' %}"><small>[Return to {{ project.title }}]</small></a>
+    <a href="{% url 'gallery' %}"><small>[Return to Main Gallery]</small></a>
+</div>
+
+
+{% endblock %}
