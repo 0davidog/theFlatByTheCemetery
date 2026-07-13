@@ -1,4 +1,5 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 class GalleryProject(models.Model):
@@ -22,7 +23,7 @@ class GalleryImage(models.Model):
         max_length=250, editable=True
         )
     description = models.TextField(blank=True)
-    image = models.ImageField(upload_to='gallery/')
+    image = CloudinaryField('image')
 
     def __str__(self):
         return f'{self.title}'
